@@ -40,8 +40,8 @@ def scan_port(ipaddress, port):
 targets = input("[----] Enter URL or IP address to scan (Split multiple targets by coma): ")
 speed = input("[----] Enter speed (suggested 0.5 for most acuracy): ")
 range1 = input("[----] Please put number of begining port (ie. 80): ")
-print("[====] Add one to ending port to scan to that port so if you want 80 type 81")
-range2 = input("[----] Please put number of ending port (ie. 100): ")
+range2 = int(input("[----] Please put number of ending port (ie. 100): "))
+range2 += 1
 
 def scan(target):
 	converted_ip = check_ip(target)
